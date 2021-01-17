@@ -1,0 +1,20 @@
+{
+  "editor.formatOnSave": true,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "npm",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "[vue]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
