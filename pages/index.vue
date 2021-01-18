@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <Header></Header>
         <About></About>
         <CSR></CSR>
         <ApplicationDomain></ApplicationDomain>
@@ -12,37 +13,30 @@
 export default {}
 </script>
 
-<style>
+<style lang="less">
+html {
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+        'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    font-size: 14px;
+    color: #2f495e;
+
+    body {
+        margin: 0;
+        min-width: 360px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
 .container {
     margin: 0 auto;
-    min-height: 100vh;
     max-width: 1440px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.title {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-        sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    color: #526488;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-}
-
-.links {
-    padding-top: 15px;
+    .content-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 </style>
