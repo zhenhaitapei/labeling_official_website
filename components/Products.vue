@@ -6,9 +6,6 @@
 
 <style lang="less" scoped>
 #products {
-    &.section {
-        margin-bottom: 48px;
-    }
 
 }
 

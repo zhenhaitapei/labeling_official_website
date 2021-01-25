@@ -56,10 +56,6 @@ export default {
 #faq {
     .qa-item {
         margin-bottom: 18px;
-
-        h3 {
-            color: #66b2b2;
-        }
     }
 }
 </style>

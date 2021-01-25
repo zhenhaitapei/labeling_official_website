@@ -32,7 +32,7 @@ html {
 
 .container {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1280px;
 
     .content-container {
         padding-left: 14px;
