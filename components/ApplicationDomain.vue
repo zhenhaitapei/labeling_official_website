@@ -9,15 +9,19 @@
             class="application-domain--domain"
             :class="{ reverse: index % 2 > 0 }"
         >
-            <el-col :span="14">
-                <h3>{{ item.title }}</h3>
-                <ol>
-                    <li v-for="(des, idx) in item.desc" :key="idx">
-                        <span>{{ des }}</span>
-                    </li>
-                </ol>
+            <el-col :span="12" class="application-domain--paragraph">
+                <el-row type="flex" justify="center">
+                    <div>
+                    <h3>{{ item.title }}</h3>
+                    <ol>
+                        <li v-for="(des, idx) in item.desc" :key="idx">
+                            <span>{{ des }}</span>
+                        </li>
+                    </ol>
+                    </div>
+                </el-row>
             </el-col>
-            <el-col :span="10">
+            <el-col :span="12" class="application-domain--image">
                 <el-row type="flex" justify="start" class="img-wrapper">
                     <el-image fit="contain" :src="item.image" />
                 </el-row>
@@ -105,10 +109,27 @@ export default {
             flex-direction: row-reverse;
         }
     }
+    .application-domain--paragraph {
+        padding: 16px 18px;
+
+        @media @for-size-md {
+            padding: 18px 24px;
+        }
+    }
+
+    .application-domain--image {
+        padding-left: 8px;
+        padding-right: 8px;
+
+        @media @for-size-md {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
 
     .img-wrapper {
-        height: 250px;
-        width: 40%;
+        min-height: 250px;
+        width: 100%;
         margin-bottom: 4px;
         overflow: hidden;
 

@@ -56,13 +56,23 @@ export default {
     }
 
     .img-wrapper {
-        height: 88px;
-        width: 160px;
+        width: 110px;
+        height: 52px;
         margin-bottom: 4px;
         overflow: hidden;
 
         &:nth-child(2n) {
-            margin-left: 18px;
+            margin-left: 24px;
+        }
+
+        @media @for-size-md {
+        height: 104px;
+        width: 220px;
+
+        &:nth-child(2n) {
+            margin-left: 44px;
+        }
+
         }
 
         img {

@@ -17,7 +17,7 @@ export default {
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
-    css: ['element-ui/lib/theme-chalk/index.css', './assets/less/common.less'],
+    css: ['element-ui/lib/theme-chalk/index.css', './assets/less/main.less'],
 
     styleResources: {
         less: ['./assets/less/*.less'],
@@ -39,6 +39,12 @@ export default {
     modules: [
         // https://go.nuxtjs.dev/axios
         '@nuxtjs/axios',
+        // https://go.nuxtjs.dev/pwa
+        '@nuxtjs/pwa',
+        // https://go.nuxtjs.dev/content
+        '@nuxt/content',
+        // https://www.npmjs.com/package/@nuxtjs/style-resources
+        '@nuxtjs/style-resources',
     ],
 
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
