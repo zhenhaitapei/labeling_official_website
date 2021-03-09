@@ -1,9 +1,13 @@
 <template>
-    <section id="faq" class="section content-container">
-        <h2 class="section-title">常見問題</h2>
-        <div v-for="(item, index) in qna" :key="index" class="qa-item">
-            <h3>{{ index + 1 }}.{{ item.title }}</h3>
-            <span>{{ item.desc }}</span>
+    <section class="content-container about-us">
+        <div class="section-main-title">Q&A</div>
+        <div class="section-desc">
+        <section id="faq" class="section content-container">
+            <div v-for="(item, index) in qna" :key="index" class="qa-item">
+                <h3>Q{{ index + 1 }}.{{ item.title }}</h3>
+                <span>{{ item.desc }}</span>
+            </div>
+        </section>
         </div>
     </section>
 </template>
@@ -19,7 +23,7 @@ export default {
                         '與專業AI工程師進行討論，以經驗判斷來說明並給予建議。不同圖資需要不同的標註工具來標註。',
                 },
                 {
-                    title: '標註數據圖資需要多少量才適合？',
+                    title: '不知道要使用什麼標註方式來定義數據？',
                     desc:
                         '取決於數據圖資是否完整、清楚、有無雜訊，精確的圖資是最適合用來訓練模型，當然量越多精準度越高。',
                 },
@@ -54,8 +58,13 @@ export default {
 
 <style lang="less" scoped>
 #faq {
+    padding: 14px;
     .qa-item {
         margin-bottom: 18px;
+
+        h3 {
+            color: #1a68b1;
+        }
     }
 }
 </style>
