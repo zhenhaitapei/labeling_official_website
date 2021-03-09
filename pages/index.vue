@@ -1,11 +1,12 @@
 <template>
     <div class="container">
         <Header></Header>
+        <div class="hero-image"></div>
         <About></About>
+        <Products></Products>
+        <WorkFlow></WorkFlow>
         <CSR></CSR>
-        <ApplicationDomain></ApplicationDomain>
         <FAQ></FAQ>
-        <ContactUs></ContactUs>
     </div>
 </template>
 
@@ -30,13 +31,21 @@ html {
     }
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1280px;
+.hero-image {
+    background-image: url("~static/statics/images/hero-image.png");
 
+    min-height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
     .content-container {
-        padding-left: 14px;
-        padding-right: 14px;
+        margin: 0 auto;
+        max-width: 768px;
+        padding: 14px 0 40px;
     }
 }
 </style>

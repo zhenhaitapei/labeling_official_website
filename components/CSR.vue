@@ -1,28 +1,31 @@
 <template>
-    <section id="csr" class="section content-container">
-        <h2 class="section-title">社會企業責任</h2>
-        <el-row type="flex" align="middle">
-            <div class="">
-                <el-row type="flex" justify="start" class="img-wrapper">
-                    <img src="~/assets/images/csr1.png" />
-                </el-row>
-                <el-row type="flex" justify="end" class="img-wrapper">
-                    <img src="~/assets/images/csr2.jpg" />
-                </el-row>
-                <el-row type="flex" justify="start" class="img-wrapper">
-                    <img src="~/assets/images/csr3.jpg" />
-                </el-row>
-            </div>
-            <ol>
-                <li
-                    v-for="(item, index) in items"
-                    :key="index"
-                    class="csr-item"
-                >
-                    <span>{{ item.desc }}</span>
-                </li>
-            </ol>
-        </el-row>
+    <section class="content-container about-us">
+        <div class="section-main-title">振海企業社會責任</div>
+        <section id="csr" class="section content-container">
+            <h2 class="section-title">社會企業責任</h2>
+            <el-row type="flex" align="middle">
+                <div class="">
+                    <el-row type="flex" justify="start" class="img-wrapper">
+                        <img src="~/assets/images/csr1.png" />
+                    </el-row>
+                    <el-row type="flex" justify="end" class="img-wrapper">
+                        <img src="~/assets/images/csr2.jpg" />
+                    </el-row>
+                    <el-row type="flex" justify="start" class="img-wrapper">
+                        <img src="~/assets/images/csr3.jpg" />
+                    </el-row>
+                </div>
+                <ol>
+                    <li
+                        v-for="(item, index) in items"
+                        :key="index"
+                        class="csr-item"
+                    >
+                        <span>{{ item.desc }}</span>
+                    </li>
+                </ol>
+            </el-row>
+        </section>
     </section>
 </template>
 
@@ -51,6 +54,7 @@ export default {
 
 <style lang="less" scoped>
 #csr {
+    padding: 14px;
     .csr-item {
         margin-bottom: 14px;
     }

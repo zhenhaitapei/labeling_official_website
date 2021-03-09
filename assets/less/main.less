@@ -15,12 +15,40 @@
     }
 
     .section-title {
-        color: #008080;
-        margin-bottom: 18px;
+        color: #1a68b1;
     }
 }
 
-h1,
+section {
+    .section-main-title {
+        text-align: center;
+        padding: 22px 0;
+        background-color: #e3e3e3;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    .section-sub-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .section-desc {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+page-sub h1,
 h2,
 h3,
 h4,
@@ -58,33 +86,10 @@ h4 {
     line-height: 28px;
 }
 
-.col-sm-24 {
-    @media @for-size-sm {
-        width: 100%;
-    }
+.flex-wrap {
+    flex-wrap: wrap;
 }
-.col-md-24 {
-    @media @for-size-md {
-        width: 100%;
-    }
-}
-.col-xl-8 {
-    @media @for-size-xl {
-        width: 33%;
-    }
-}
-.col-xl-12 {
-    @media @for-size-xl {
-        width: 50%;
-    }
-}
-.col-xl-16 {
-    @media @for-size-xl {
-        width: 66%;
-    }
-}
-.col-xl-24 {
-    @media @for-size-xl {
-        width: 100%;
-    }
+
+.text-center {
+    text-align: center;
 }
