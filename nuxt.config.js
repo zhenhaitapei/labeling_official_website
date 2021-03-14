@@ -4,7 +4,7 @@ export default {
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
-        title: 'labeling_official_website',
+        title: 'ZHAI LABHUB',
         meta: [
             { charset: 'utf-8' },
             {
