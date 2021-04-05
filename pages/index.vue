@@ -4,6 +4,7 @@
         <div class="hero-image"></div>
         <About></About>
         <Products></Products>
+        <Pricing></Pricing>
         <WorkFlow></WorkFlow>
         <ApplicationDomain></ApplicationDomain>
         <CSR></CSR>
