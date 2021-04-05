@@ -1,8 +1,19 @@
 <template>
     <section class="content-container section-products">
         <div class="section-main-title">服務項目</div>
+        <div class="section-navigation">
+            <el-row type="flex" align="middle" class="flex-wrap">
+                <div
+                    v-for="(item, index) in categories"
+                    :key="index"
+                    class="product-icon"
+                    :class="{active: isSelected(item.key), [item.key]: true}"
+                    @click="select(item.key)">
+                </div>
+            </el-row>
+        </div>
         <div class="section-desc">
-            <div class="product--category">
+            <div class="product--category" v-show="isSelected('semantic')">
                 <div class="product--title">
                     Semantic Segmentation(語義分割)
                 </div>
@@ -23,7 +34,7 @@
                     </div>
                 </el-row>
             </div>
-            <div class="product--category">
+            <div class="product--category" v-show="isSelected('classification')">
                 <div class="product--title">
                     Image Classification(影像分類)
                 </div>
@@ -45,7 +56,7 @@
                     </div>
                 </el-row>
             </div>
-            <div class="product--category">
+            <div class="product--category" v-show="isSelected('boundingBox')">
                 <div class="product--title">
                     Bounding Box(定界框)
                 </div>
@@ -67,7 +78,7 @@
                     </div>
                 </el-row>
             </div>
-            <div class="product--category">
+            <div class="product--category" v-show="isSelected('polygon')">
                 <div class="product--title">
                     Polygon(多邊形標註)
                 </div>
@@ -86,7 +97,7 @@
                     </div>
                 </el-row>
             </div>
-            <div class="product--category">
+            <div class="product--category" v-show="isSelected('gesture')">
                 <div class="product--title">
                     Hand Tracking and Gesture Recognition(手勢追蹤及辨識)
                 </div>
@@ -107,7 +118,7 @@
                     </div>
                 </el-row>
             </div>
-            <div class="product--category">
+            <div class="product--category" v-show="isSelected('position')">
                 <div class="product--title">
                     Line of Position(定位線)
                 </div>
@@ -142,6 +153,63 @@
         line-height: 1.4;
         margin-bottom: 16px;
     }
+
+    .product-icon {
+        margin: 6px;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &.semantic {
+            background-image: url('/statics/icons/semantic-segmentation-grey.png');
+            &.active {
+                background-image: url('/statics/icons/semantic-segmentation-light-blue.png');
+            }
+        }
+        &.classification {
+            background-image: url('/statics/icons/classification-grey.png');
+            &.active {
+                background-image: url('/statics/icons/classification-light-blue.png');
+            }
+        }
+        &.boundingBox {
+            background-image: url('/statics/icons/bounding-box-grey.png');
+            &.active {
+                background-image: url('/statics/icons/bounding-box-light-blue.png');
+            }
+        }
+        &.polygon {
+            // missing icons of polygons
+            background-image: url('/statics/icons/semantic-segmentation-grey.png');
+            &.active {
+                background-image: url('/statics/icons/semantic-segmentation-light-blue.png');
+            }
+        }
+        &.gesture {
+            background-image: url('/statics/icons/gesture-recognition-grey.png');
+            &.active {
+                background-image: url('/statics/icons/gesture-recognition-light-blue.png');
+            }
+        }
+        &.position {
+            background-image: url('/statics/icons/position-grey.png');
+            &.active {
+                background-image: url('/statics/icons/position-light-blue.png');
+            }
+        }
+    }
+
+    .product--category {
+        margin-top: 24px;
+    }
+
     .product--desc {
         width: 40%;
     }
@@ -155,3 +223,44 @@
 }
 
 </style>
+
+<script>
+export default {
+    data() {
+        return {
+            selected: 'position',
+            categories: [
+                {
+                    key: 'semantic'
+                },
+                {
+                    key: 'classification'
+                },
+                {
+                    key: 'boundingBox'
+                },
+                // FIXME: uncomment this block when we get icons for polygon
+                /*
+                {
+                    key: 'polygon'
+                },
+                */
+                {
+                    key: 'gesture'
+                },
+                {
+                    key: 'position'
+                },
+            ]
+        };
+    },
+    methods: {
+        isSelected(key) {
+            return key === this.selected;
+        },
+        select(key) {
+            this.selected = key
+        }
+    }
+}
+</script>
