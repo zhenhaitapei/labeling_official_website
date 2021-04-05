@@ -3,13 +3,16 @@
         <div class="section-main-title">服務項目</div>
         <div class="section-navigation">
             <el-row type="flex" align="middle" class="flex-wrap">
-                <div
+                <el-tooltip placement="top"
                     v-for="(item, index) in categories"
                     :key="index"
-                    class="product-icon"
-                    :class="{active: isSelected(item.key), [item.key]: true}"
-                    @click="select(item.key)">
-                </div>
+                    :content="item.tooltip">
+                    <div
+                        class="product-icon"
+                        :class="{active: isSelected(item.key), [item.key]: true}"
+                        @click="select(item.key)">
+                    </div>
+                </el-tooltip>
             </el-row>
         </div>
         <div class="section-desc">
@@ -231,13 +234,16 @@ export default {
             selected: 'position',
             categories: [
                 {
-                    key: 'semantic'
+                    key: 'semantic',
+                    tooltip: 'Semantic Segmentation(語義分割)'
                 },
                 {
-                    key: 'classification'
+                    key: 'classification',
+                    tooltip: 'Image Classification(影像分類)'
                 },
                 {
-                    key: 'boundingBox'
+                    key: 'boundingBox',
+                    tooltip: 'Bounding Box(定界框)'
                 },
                 // FIXME: uncomment this block when we get icons for polygon
                 /*
@@ -246,10 +252,12 @@ export default {
                 },
                 */
                 {
-                    key: 'gesture'
+                    key: 'gesture',
+                    tooltip: 'Hand Tracking and Gesture Recognition (手勢追蹤及辨識)'
                 },
                 {
-                    key: 'position'
+                    key: 'position',
+                    tooltip: 'Line of Position(定位線)'
                 },
             ]
         };
